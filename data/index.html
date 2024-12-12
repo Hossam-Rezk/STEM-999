@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <h1>Sensor Dashboard</h1>
+            <ul class="nav-links">
+                <li><a href="#temperature-card">Temperature</a></li>
+                <li><a href="#humidity-card">Humidity</a></li>
+                <li><a href="#airquality-card">Air Quality</a></li> <!-- Changed this link -->
+                <li><a href="#flame-card">Flame Sensor</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <div class="card" id="temperature-card">
+            <h2>Temperature</h2>
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="card" id="humidity-card">
+            <h2>Humidity</h2>
+            <canvas id="humidityChart"></canvas>
+        </div>
+        <div class="card" id="airquality-card"> <!-- Changed this card -->
+            <h2>Air Quality</h2>
+            <canvas id="airQualityChart"></canvas> <!-- Changed this canvas -->
+        </div>
+        <div class="card" id="flame-card">
+            <h2>Flame Sensor</h2>
+            <canvas id="flameChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats-section">
+        <div class="stat-card">
+            <i class="fas fa-thermometer-half"></i>
+            <h3>Avg Temperature</h3>
+            <p id="avg-temp">-- °C</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-tint"></i>
+            <h3>Avg Humidity</h3>
+            <p id="avg-humidity">-- %</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-smog"></i> <!-- Changed the icon -->
+            <h3>Avg Air Quality</h3> <!-- Changed the title -->
+            <p id="avg-airquality">-- PPM</p> <!-- Changed the ID -->
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-fire"></i>
+            <h3>Flame Detected</h3>
+            <p id="avg-flame">--</p>
+        </div>
+        <div class="stat-card">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Threshold Warning</h3>
+            <p id="warning" style="display: none; color: red; font-weight: bold;">--</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Sensor Dashboard | STEM [Branch]</p>
+        <p>Developed by: [Student Name 1], [Student Name 2]</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
